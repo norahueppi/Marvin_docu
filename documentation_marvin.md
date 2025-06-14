@@ -24,11 +24,16 @@ Im Vergleich zu meinem früheren Projektansatz, bei dem ich auf ein ESP32-Audio-
 
 Der Mikrocontroller ESP32 wird in diesem Projekt nicht mit der Arduino-Umgebung, sondern direkt mit dem ESP-IDF Framework programmiert. Die gesamte Softwarestruktur basiert auf FreeRTOS, was eine saubere, multitaskingfähige und zeitkritisch gesteuerte Architektur erlaubt. Die Audiodateien werden von einer SD-Karte gelesen, dekodiert und über einen von mir eingebundenen Audio-Codec sowie einen Verstärker abgespielt. Der TOF-Sensor erkennt Personenbewegungen in Türnähe und triggert die Soundausgabe mit einem charakteristischen Seufzen oder Stöhnen – die Geräusche wurden individuell aufgenommen, teils von mir, teils von Kollegen, um eine möglichst abwechslungsreiche und unterhaltsame Wirkung zu erzielen.
 
-Dieses Projekt ist nicht nur eine Hommage an Douglas Adams' Werk, sondern auch eine persönliche Herausforderung und ein Lernfeld. Es vereint Hardwareentwicklung, Embedded-Programmierung, Audiosignalverarbeitung und kreative Gestaltung. Die Arbeit daran ermöglicht mir, mein technisches Wissen zu vertiefen und gleichzeitig meine Begeisterung für Science-Fiction und Satire in ein funktionales und unterhaltsames Produkt zu überführen. So wird aus einer literarischen Idee ein reales, interaktives Erlebnis mit einem Augenzwinkern – ganz im Sinne von *Per Anhalter durch die Galaxis*.
-
+Dieses Projekt ist nicht nur eine Hommage an Douglas Adams' Werk, sondern auch eine persönliche Herausforderung und ein Lernfeld. Es vereint Hardwareentwicklung, Embedded-Programmierung, Audiosignalverarbeitung und kreative Gestaltung. Die Arbeit daran ermöglicht mir, mein technisches Wissen zu vertiefen und gleichzeitig meine Begeisterung für Science-Fiction und Satire in ein funktionales und unterhaltsames Produkt zu überführen. So wird aus einer literarischen Idee ein reales, interaktives Erlebnis mit einem Augenzwinkern – ganz im Sinne von *Per Anhalter durch die Galaxis*.  
 
 # Analyse
-
+## Überlegungen
+Für die Realisierung des Projekts habe ich mir einige überlegungen gemacht.
+- **Wie spare ich am besten Strom ohne den Sleep mode des ESP zu benutzen da es zu lange dauert in wieder zu wecken**
+    - *Ich und mein Lehrmeister haben und darüber unterhalten und sind au den entschluss gekommen das es besser ist wenn ich das Projekt nicht mit ArduinoIDE sondern mit einer ESP IDF programmiere und FreeRTOS lernen werden.*
+- **Benutze ich den gleichen Print oder Designe ich mir eine eigenen?**
+    - *Da war ich entwas verunsichert ob ich dann alles unter einen Hut kriege wenn ich noch mein PCB selber mache, habe mich allerdings trotzdem dafür entschieden.*
+- ****
 # Berechnungen
 
 # Realisierung
